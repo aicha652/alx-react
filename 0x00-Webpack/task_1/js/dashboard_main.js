@@ -9,7 +9,7 @@ $(document).ready(function(){
 });
 
 function updateCounter(){
-	let counter
+	let counter=0;
 	counter++;
 
 	$("#count").html(`${counter} clicks on the button`);
