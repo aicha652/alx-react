@@ -2,3 +2,7 @@ p #count {
 	position: relative;
 	font-weight: bold;
 }
+#logo {
+	width: 200px;
+	height: 200px;
+}
