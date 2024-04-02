@@ -12,6 +12,10 @@ module.exports = {
 				test: /\.(png|jpg)$/,
 				loader: 'url-loader'
 			},
+			{
+				test: /\.(jpg|png|gif|svg)$/,
+				loader: 'image-webpack-loader',
+			},
 		],
 	},
 	entry: './js/dashboard_main.js',
