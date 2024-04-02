@@ -1,4 +1,5 @@
 import $ from "jquery";
+import debounce from "lodash/debounce";
 $(document).ready(function(){
 	$('body').append('<p>Holberton Dashboard</p>');
 	$('body').append('<p>Dashboard data for the students</p>');
@@ -14,4 +15,5 @@ function updateCounter(){
 	counter++;
 
 	text.textContent = `${counter} clicks on the button`;
+	button.addEventListener('click', debounce(updateCounter, 500));
 }
