@@ -9,11 +9,9 @@ $(document).ready(function(){
 });
 
 function updateCounter(){
-	let text = document.getElementById('count');
-	let counter = parseInt(text.innerText.split(' ')[0]);
-
+	let counter
 	counter++;
 
-	text.textContent = `${counter} clicks on the button`;
-	button.addEventListener('click', debounce(updateCounter, 500));
+	$("#count").html(`${counter} clicks on the button`);
 }
+button.addEventListener('click', debounce(updateCounter, 500));
