@@ -3,3 +3,11 @@
 // expect(element).toHaveTextContent(/react/i)
 // learn more: https://github.com/testing-library/jest-dom
 import '@testing-library/jest-dom';
+import MessageBox from "../MessageBox";
+import { shallow } from 'enzyme';
+import React from 'react';
+import "../setupTests"
+
+test('message box', ()=> {
+
+})
