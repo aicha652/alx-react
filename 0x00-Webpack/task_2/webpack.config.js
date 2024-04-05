@@ -9,9 +9,18 @@ module.exports = {
 				use: ["style-loader", "css-loader"],
 			},
 			{
-				test: /\.(jpg|png|gif|svg)$/,
-				loader: 'image-webpack-loader',
-			},
+				test: /\.(gif|png|jpe?g|svg)$/i,
+				use: [
+				  'file-loader',
+				  {
+					loader: 'image-webpack-loader',
+					options: {
+					  bypassOnDebug: true, // webpack@1.x
+					  disable: true, // webpack@2.x and newer
+					},
+				  },
+				],
+			  },
 		],
 	},
 	entry: './js/dashboard_main.js',
