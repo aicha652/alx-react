@@ -1,4 +1,5 @@
 const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
 	entry: './src/index.js',
@@ -11,9 +12,11 @@ module.exports = {
     contentBase: path.join(__dirname, 'dist'),
     hot: true
   },
-  resolve: {
-    extensions: ['.ts', ".js"],
-  },
+  plugins: [
+    new HtmlWebpackPlugin({
+      title: 'Hot Module Replacement',
+    }),
+  ],
   module: {
     rules: [
       {
