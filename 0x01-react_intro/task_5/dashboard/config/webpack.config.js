@@ -6,9 +6,10 @@ module.exports = {
 		filename: 'bundle.js',
 		path: path.resolve(__dirname, 'dist'),
 	},
+  devtool: 'inline-source-map',
   devServer: {
     contentBase: path.join(__dirname, 'dist'),
-    port: 9002,
+    hot: true
   },
   resolve: {
     extensions: ['.ts', ".js"],
