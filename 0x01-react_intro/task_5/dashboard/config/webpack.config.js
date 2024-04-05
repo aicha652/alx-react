@@ -1,5 +1,4 @@
 const path = require('path');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   mode: 'development',
@@ -10,14 +9,9 @@ module.exports = {
 	},
   devtool: 'inline-source-map',
   devServer: {
-    contentBase: path.join(__dirname, '../dist'),
+    contentBase: path.join(__dirname, 'dist'),
     hot: true
   },
-  plugins: [
-    new HtmlWebpackPlugin({
-      title: 'Hot Module Replacement',
-    }),
-  ],
   module: {
     rules: [
       {
