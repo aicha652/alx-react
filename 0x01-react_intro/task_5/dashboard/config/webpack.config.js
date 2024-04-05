@@ -11,6 +11,6 @@ module.exports = {
     port: 9002,
   },
   resolve: {
-    extensions: ['.ts', ".js"],
+    extensions: [".js"],
   },
 };
