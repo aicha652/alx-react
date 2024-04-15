@@ -24,10 +24,10 @@
     "webpack-dev-server": "^5.0.4"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "test": "jest",
+    "build": "webpack build --config ./config/webpack.config.js",
+    "start": "webpack serve --config ./config/webpack.config.js",
+    "test-watch": "jest --watch"
   },
   "eslintConfig": {
     "extends": [
