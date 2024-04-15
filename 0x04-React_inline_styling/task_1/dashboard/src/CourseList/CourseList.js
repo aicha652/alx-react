@@ -1,13 +1,12 @@
 import React from 'react';
 import { StyleSheet, css } from 'aphrodite';
 import CourseListRow from './CourseListRow';
-import './CourseList.css';
 import PropTypes from 'prop-types';
 import CourseShape from './CourseShape';
 
 function CourseList ({ listCourses }) {
     return (
-        <table id="CourseList">
+        <table id="CourseList" className={ css(styles.list) }>
             <thead>
                 <CourseListRow textFirstCell={ "Available courses" } isHeader={ true } />
                 <CourseListRow textFirstCell={ "Course name" } textSecondCell={ "Credit" } isHeader={ true } />
@@ -29,7 +28,14 @@ function CourseList ({ listCourses }) {
             </tbody>
         </table>
     );
-}
+};
+
+const styles = StyleSheet.create({
+    list: {
+        width: '100%',
+        borderCollapse: 'collapse'
+    }
+})
 
 CourseList.propTypes = {
     listCourses: PropTypes.arrayOf(CourseShape),
