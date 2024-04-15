@@ -2,6 +2,8 @@ import React from 'react';
 import CourseList from './CourseList';
 import { shallow } from 'enzyme';
 
+StyleSheetTestUtils.suppressStyleInjection
+
 describe('<CourseList />', () => {
     const listCourses = [
         { id: 1, name: "Java", credit: 60 },

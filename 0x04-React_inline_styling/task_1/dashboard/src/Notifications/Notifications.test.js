@@ -2,6 +2,8 @@ import React from 'react';
 import { shallow } from 'enzyme';
 import Notifications from './Notifications';
 
+StyleSheetTestUtils.suppressStyleInjection
+
 
 decribe('<Notifications />', () => {
     it('rendering of the component works without crashing', () => {

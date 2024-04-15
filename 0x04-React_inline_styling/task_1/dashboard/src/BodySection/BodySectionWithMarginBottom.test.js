@@ -2,6 +2,8 @@ import React from 'react';
 import { shallow } from 'enzyme';
 import BodySectionWithMarginBottom from './BodySectionWithMarginBottom';
 
+StyleSheetTestUtils.suppressStyleInjection
+
 describe('<BodySectionWithMarginBottom />', () => {
     it('Should render correctly a BodySection component and the props are passed correctly to the child component', () => {
         const wrapper = shallow(
