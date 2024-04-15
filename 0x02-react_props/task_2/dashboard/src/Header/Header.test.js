@@ -3,7 +3,7 @@ import Header from './Header';
 import { shallow } from 'enzyme';
 
 
-describe('Header', () => {
+describe('<Header />', () => {
     it('Header render without crashing', () => {
         const wrapper = shallow(<Header />);
         expect(wrapper.exists()).toBe(true);

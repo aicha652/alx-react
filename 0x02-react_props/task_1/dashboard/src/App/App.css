@@ -1,0 +1,45 @@
+.App {
+    text-align: center;
+  }
+  
+  .App-logo {
+    height: 40vmin;
+    pointer-events: none;
+  }
+  
+  .App-header {
+    min-height: 80vh;
+    display: flex;
+    flex-direction: row;
+    align-items: left;
+    justify-content: left;
+    font-size: calc(10px + 2vmin);
+    color: white;
+  }
+  
+  .App-header h1 {
+    color: rgb(226, 70, 117);
+    padding-top: 60px;
+  }
+  
+  .App hr {
+    height: 2px;
+    width: 100%;
+    margin-top: -250px;
+  }
+  
+  .App-body p {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-align: left;
+    margin-left: 50px;
+    margin-top: 40px;
+  }
+  
+  .App-body hr {
+    margin-top: 250px;
+  }
+  
+  footer p {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-style: italic;
+  }
