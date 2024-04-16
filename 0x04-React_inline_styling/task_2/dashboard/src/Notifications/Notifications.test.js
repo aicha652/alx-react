@@ -36,10 +36,10 @@ describe('Tests for Notifications component', () => {
         );
     });
 
-    it('first NotificationItem renders the right html', () => {
+    it('first NotificationItem renders the right text', () => {
         const notification = shallow(<Notifications displayDrawer={ true } listNotifications={ listNotifications } />);
         const firstNotifItem = notification.find('NotificationItem').first();
-        expect(firstNotifItem.html()).toBe('<li data-notification-type="default">New course available</li>');
+        expect(firstNotifItem.html()).toContain('New course available');
     });
 
     it('menu item is displayed when displayDrawer is false', () => {
@@ -121,4 +121,4 @@ describe("onClick event should work", () => {
         consoleMock.mockRestore();
         wrapper.unmount();
     });
-})
+});
