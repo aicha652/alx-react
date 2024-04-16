@@ -1,20 +1,32 @@
-import React from 'react'
+import React from 'react';
+import { shallow, mount } from 'enzyme';
 import NotificationItem from './NotificationItem';
-import { shallow } from 'enzyme';
-
 
 describe('<NotificationItem />', () => {
-    it('rendering of the component works without crashing', () => {
-        const wrapper = shallow(<NotificationItem />);
-        expect(wrapper.exists()).toBe(true);
+    it('NotificationItem render without crashing', () => {
+        const notifItem = shallow(<NotificationItem />);
+        expect(notifItem.exists()).toBe(true);
     });
-    it('by passing dummy type and value props, it renders the correct html', () => {
-        const wrapper = shallow(<NotificationItem type="default" value="test"/>);  
-        expect(wrapper.find('li').prop('data-notification-type')).toBe('default');
-        expect(wrapper.find('li').text()).toBe("test");
-    })
-    it('by passing a dummy html prop, it renders the correct htm', () => {
-        const wrapper = shallow(<NotificationItem html={{ __html: '<u>test</u>' }} />);
-        expect(wrapper.find('li').prop('dangerouslySetInnerHTML')).toEqual({ __html: '<u>test</u>' });
-    })
+    it('NotificationItem renders the correct html by passing type and value', () => {
+        const notifItem = shallow(<NotificationItem type="default" value="test" />);
+        const li = notifItem.find('li');
+        expect(li.prop('data-notification-type')).toBe('default');
+        expect(li.text()).toBe('test');
+    });
+    it('NotificationItem renders the correct html by passing html', () => {
+        const notifItem = shallow(<NotificationItem html="<u>test</u>" />);
+        const li = notifItem.find('li');
+        expect(li.prop('dangerouslySetInnerHTML')).toEqual("<u>test</u>");
+    });
+});
+
+describe("onClick event should work", () => {
+    it("onClick should call the console.log", () => {
+        const mockFunc = jest.fn();
+        const wrapper = mount(<NotificationItem value="OnClick test" markAsRead={ mockFunc } id={ 5 } />);
+
+        wrapper.simulate('click');
+        expect(mockFunc).toBeCalledWith(5);
+        mockFunc.mockRestore();
+    });
 })
