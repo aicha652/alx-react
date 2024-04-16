@@ -11,11 +11,11 @@ describe('<Header />', () => {
 
     it('Header render img', () => {
         const wrapper = shallow(<Header />);
-        expect(wrapper.find('img')).toHavelength(1);
+        expect(wrapper.find('img')).toHaveLength(1);
     });
 
     it('Header render h1', () => {
         const wrapper = shallow(<Header />);
-        expect(wrapper.find('h1')).toHavelength(1);
+        expect(wrapper.find('h1')).toHaveLength(1);
     });
 })

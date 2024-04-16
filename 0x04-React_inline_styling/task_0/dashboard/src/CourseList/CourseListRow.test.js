@@ -5,7 +5,7 @@ import CourseListRow from './CourseListRow';
 describe('<CourseListRow />', () => {
     it('CourseListRow renders one cell with colspan = 2 when textSecondCell does not exist', () => {
         const wrapper = shallow(<CourseListRow isHeader={ true } textFirstCell='firstCell' />);
-        expect(wrapper.html()).toBe('<tr><th colSpan="2">firstCell</th></tr>');
+        expect(wrapper.html()).toBe('<tr><th colSpan=\"2\">firstCell</th></tr>');
     });
     it('CourseListRow renders two cells when textSecondCell is present', () => {
         const wrapper = shallow(<CourseListRow isHeader={ true } textFirstCell='firstCell' textSecondCell='secondCell' />);
