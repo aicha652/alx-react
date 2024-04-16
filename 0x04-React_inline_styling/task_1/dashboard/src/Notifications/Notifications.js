@@ -1,5 +1,4 @@
 import React from 'react';
-import './Notifications.css'
 import { StyleSheet, css } from 'aphrodite';
 import NotificationItem from './NotificationItem.js'
 import { getLatestNotification } from '../utils/utils.js';

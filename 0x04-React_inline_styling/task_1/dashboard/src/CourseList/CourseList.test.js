@@ -1,8 +1,9 @@
 import React from 'react';
 import CourseList from './CourseList';
 import { shallow } from 'enzyme';
+import { StyleSheetTestUtils } from 'aphrodite';
 
-StyleSheetTestUtils.suppressStyleInjection
+StyleSheetTestUtils.suppressStyleInjection();
 
 describe('<CourseList />', () => {
     const listCourses = [

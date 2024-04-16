@@ -1,8 +1,9 @@
 import Login from './Login';
 import React from 'react';
 import { shallow } from 'enzyme';
+import { StyleSheetTestUtils } from 'aphrodite';
 
-StyleSheetTestUtils.suppressStyleInjection
+StyleSheetTestUtils.suppressStyleInjection();
 
 describe('<Login />', () => {
     it('Login render without crashing', () => {
