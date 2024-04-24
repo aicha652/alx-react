@@ -1,14 +1,14 @@
-import Immutable from "./node_modules/immutable/dist/immutable"
+import { fromJS } from 'immutable';
 
-export const map = Immutable.Map({
-    1: 'Liam',
-    2: 'Noah',
-    3: 'Elijah',
-    4: 'Oliver',
-    5: 'Jacob',
-    6: 'Lucas',
+export const map = fromJS({
+  1: 'Liam',
+  2: 'Noah',
+  3: 'Elijah',
+  4: 'Oliver',
+  5: 'Jacob',
+  6: 'Lucas',
 });
 
 export const map2 = map.withMutations(() => {
-    map.set(2, 'Benjamin').set(4, 'Oliver')
+  map.set(2, 'Benjamin').set(4, 'Oliver');
 });
