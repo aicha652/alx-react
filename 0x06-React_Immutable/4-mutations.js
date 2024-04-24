@@ -1,4 +1,4 @@
-const map = {
+export const map = {
     1: 'Liam',
     2: 'Noah',
     3: 'Elijah',
@@ -7,4 +7,4 @@ const map = {
     6: 'Lucas',
 }
 
-const map2 = map.set(2, 'Benjamin').set(4, 'Oliver')
+export const map2 = map.set(2, 'Benjamin').set(4, 'Oliver')
