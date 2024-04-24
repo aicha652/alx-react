@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "1-map.js": "node 1-map.js",
+    "5-merge.js": "node 5-merge.js",
     "lint": "./node_modules/.bin/eslint",
     "check-lint": "lint [0-9]*.js",
     "test": "jest",
