@@ -1,6 +1,5 @@
 {
   "scripts": {
-    "5-merge.js": "node 5-merge.js",
     "lint": "./node_modules/.bin/eslint",
     "check-lint": "lint [0-9]*.js",
     "test": "jest",
@@ -13,10 +12,10 @@
     "eslint-config-airbnb-base": "^14.0.0",
     "eslint-plugin-import": "^2.18.2",
     "eslint-plugin-jest": "^22.17.0",
+    "eslint-plugin-react": "^7.34.1",
     "jest": "^24.9.0"
   },
   "dependencies": {
-    "immutable": "^4.0.0-rc.12",
-    "node": "^12.11.1"
+    "immutable": "^4.0.0-rc.12"
   }
 }
